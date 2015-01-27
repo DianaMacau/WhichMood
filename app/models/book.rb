@@ -1,4 +1,5 @@
 class Book < ActiveRecord::Base
-  attr_accessible :category_id, :title
+  attr_accessible :category_id, :title, :tag_ids
   belongs_to :category
+  has_and_belongs_to_many :tags
 end

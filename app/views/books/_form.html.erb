@@ -20,4 +20,13 @@
   <div class="actions">
     <%= f.submit %>
   </div>
+<div>
+  <% Tag.all.each do |t| %>
+   <div>
+      <%= f.label t.name %>
+     <%= check_box_tag "tag_ids[]", t.id, @book.tags.include?(t), :id => "tag_ids_#{t.id}" %>
+  </div>
+<% end %>
+</div>
+
 <% end %>
