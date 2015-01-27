@@ -1,4 +1,7 @@
 WhichMood::Application.routes.draw do
+  resources :movie_categories
+
+
   resources :categories
 
 
