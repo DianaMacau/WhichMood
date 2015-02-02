@@ -10,7 +10,9 @@
       </ul>
     </div>
   <% end %>
-
+<div class="field">
+  <%= f.collection_select(:movie_category_id, Movie_Category.all, :id, :name, prompt: "Choose a movie")%>
+</div>
   <div class="field">
     <%= f.label :name %><br />
     <%= f.text_field :name %>
